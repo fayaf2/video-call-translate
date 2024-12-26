@@ -23,16 +23,49 @@
             height: 100%;
             border: none;
         }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <!-- Section for Link 1 -->
     <div class="section">
-        <iframe src="https://c250-2403-a080-c04-96ef-403a-5f12-65c9-4eef.ngrok-free.app" title="Link 1"></iframe>
+        <button onclick="openLink1()">Join Video Call Room</button>
     </div>
     <!-- Section for Link 2 -->
     <div class="section">
-        <iframe src="https://0527-2403-a080-c04-96ef-2cce-cf87-846b-eff3.ngrok-free.app/join?display_name=neee&mute_audio=0&mute_video=0&room_id=testroom" title="Link 2"></iframe>
+        <button onclick="openLink2()">Join Voice Chat Translator</button>
     </div>
+
+    <script>
+        function openLink1() {
+            const iframe = document.createElement('iframe');
+            iframe.src = "https://c250-2403-a080-c04-96ef-403a-5f12-65c9-4eef.ngrok-free.app";
+            iframe.title = "Video Call Room";
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            document.querySelector('.section').appendChild(iframe);
+        }
+
+        function openLink2() {
+            const iframe = document.createElement('iframe');
+            iframe.src = "https://0527-2403-a080-c04-96ef-2cce-cf87-846b-eff3.ngrok-free.app/join?display_name=neee&mute_audio=0&mute_video=0&room_id=testroom";
+            iframe.title = "Voice Chat Translator";
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            document.querySelector('.section').appendChild(iframe);
+        }
+    </script>
 </body>
 </html>
