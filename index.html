@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined View</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Section for Link 1 -->
+    <div class="section">
+        <iframe src="https://c250-2403-a080-c04-96ef-403a-5f12-65c9-4eef.ngrok-free.app" title="Link 1"></iframe>
+    </div>
+    <!-- Section for Link 2 -->
+    <div class="section">
+        <iframe src="https://0527-2403-a080-c04-96ef-2cce-cf87-846b-eff3.ngrok-free.app/join?display_name=neee&mute_audio=0&mute_video=0&room_id=testroom" title="Link 2"></iframe>
+    </div>
+</body>
+</html>
